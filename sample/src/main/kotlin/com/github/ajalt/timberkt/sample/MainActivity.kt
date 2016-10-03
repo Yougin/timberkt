@@ -12,22 +12,22 @@ class MainActivity : AppCompatActivity() {
 
         var i = 0
 
-        Timber.d { "log ${i++}" }
-        Timber.i { "log ${i++}" }
-        Timber.w { "log ${i++}" }
-        Timber.e { "log ${i++}" }
+        Timber.debug { "log ${i++}" }
+        Timber.info { "log ${i++}" }
+        Timber.warning { "log ${i++}" }
+        Timber.error { "log ${i++}" }
         Timber.wtf { "log ${i++}" }
 
-        Timber.tag("Custom tag").d { "log ${i++}" }
-        Timber.tag("Custom tag").i { "log ${i++}" }
-        Timber.tag("Custom tag").w { "log ${i++}" }
-        Timber.tag("Custom tag").e { "log ${i++}" }
+        Timber.tag("Custom tag").debug { "log ${i++}" }
+        Timber.tag("Custom tag").info { "log ${i++}" }
+        Timber.tag("Custom tag").warning { "log ${i++}" }
+        Timber.tag("Custom tag").error { "log ${i++}" }
         Timber.tag("Custom tag").wtf { "log ${i++}" }
 
-        d { "log ${i++}" }
-        i { "log ${i++}" }
-        w { "log ${i++}" }
-        e { "log ${i++}" }
+        debug { "log ${i++}" }
+        info { "log ${i++}" }
+        warning { "log ${i++}" }
+        error { "log ${i++}" }
         wtf { "log ${i++}" }
     }
 }

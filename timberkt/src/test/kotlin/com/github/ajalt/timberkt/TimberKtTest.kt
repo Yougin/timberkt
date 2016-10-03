@@ -26,21 +26,21 @@ class TimberKtTest {
             }
         })
 
-        v { "Verbose" };
-        Timber.v { "Verbose" };
-        Timber.tag("Custom").v { "Verbose" };
-        d { "Debug" };
-        Timber.d { "Debug" };
-        Timber.tag("Custom").d { "Debug" };
-        i { "Info" };
-        Timber.i { "Info" };
-        Timber.tag("Custom").i { "Info" };
-        w { "Warn" };
-        Timber.w { "Warn" };
-        Timber.tag("Custom").w { "Warn" };
-        e { "Error" };
-        Timber.e { "Error" };
-        Timber.tag("Custom").e { "Error" };
+        verbose { "Verbose" };
+        Timber.verbose { "Verbose" };
+        Timber.tag("Custom").verbose { "Verbose" };
+        debug { "Debug" };
+        Timber.debug { "Debug" };
+        Timber.tag("Custom").debug { "Debug" };
+        info { "Info" };
+        Timber.info { "Info" };
+        Timber.tag("Custom").info { "Info" };
+        warning { "Warn" };
+        Timber.warning { "Warn" };
+        Timber.tag("Custom").warning { "Warn" };
+        error { "Error" };
+        Timber.error { "Error" };
+        Timber.tag("Custom").error { "Error" };
         wtf { "Assert" };
         Timber.wtf { "Assert" };
         Timber.tag("Custom").wtf { "Assert" };
@@ -79,21 +79,21 @@ class TimberKtTest {
 
         val e = Exception("e")
 
-        v(e) { "Verbose" };
-        Timber.v(e) { "Verbose" };
-        Timber.tag("Custom").v(e) { "Verbose" };
-        d(e) { "Debug" };
-        Timber.d(e) { "Debug" };
-        Timber.tag("Custom").d(e) { "Debug" };
-        i(e) { "Info" };
-        Timber.i(e) { "Info" };
-        Timber.tag("Custom").i(e) { "Info" };
-        w(e) { "Warn" };
-        Timber.w(e) { "Warn" };
-        Timber.tag("Custom").w(e) { "Warn" };
-        e(e) { "Error" };
-        Timber.e(e) { "Error" };
-        Timber.tag("Custom").e(e) { "Error" };
+        verbose(e) { "Verbose" };
+        Timber.verbose(e) { "Verbose" };
+        Timber.tag("Custom").verbose(e) { "Verbose" };
+        debug(e) { "Debug" };
+        Timber.debug(e) { "Debug" };
+        Timber.tag("Custom").debug(e) { "Debug" };
+        info(e) { "Info" };
+        Timber.info(e) { "Info" };
+        Timber.tag("Custom").info(e) { "Info" };
+        warning(e) { "Warn" };
+        Timber.warning(e) { "Warn" };
+        Timber.tag("Custom").warning(e) { "Warn" };
+        error(e) { "Error" };
+        Timber.error(e) { "Error" };
+        Timber.tag("Custom").error(e) { "Error" };
         wtf(e) { "Assert" };
         Timber.wtf(e) { "Assert" };
         Timber.tag("Custom").wtf(e) { "Assert" };
@@ -124,9 +124,9 @@ class TimberKtTest {
     fun lazyMessage_noTree() {
         var i = 0
 
-        d { "${i++}" };
-        Timber.d { "${i++}" };
-        Timber.tag("Custom").d { "${i++}" };
+        debug { "${i++}" };
+        Timber.debug { "${i++}" };
+        Timber.tag("Custom").debug { "${i++}" };
 
         assertThat(i).isEqualTo(0)
     }
@@ -136,9 +136,9 @@ class TimberKtTest {
         Timber.plant(timber.log.Timber.DebugTree())
         var i = 0
 
-        d { "${i++}" };
-        Timber.d { "${i++}" };
-        Timber.tag("Custom").d { "${i++}" };
+        debug { "${i++}" };
+        Timber.debug { "${i++}" };
+        Timber.tag("Custom").debug { "${i++}" };
 
         assertThat(i).isEqualTo(3)
     }

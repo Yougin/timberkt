@@ -11,43 +11,43 @@ import timber.log.Timber
 object Timber {
     /** Log a verbose message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun v(noinline message: () -> String) = Timber.v("%s", LazyString(message))
+    inline fun verbose(noinline message: () -> String) = Timber.v("%s", LazyString(message))
 
     /** Log a verbose exception and a message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun v(t: Throwable, noinline message: () -> String) = Timber.v(t, "%s", LazyString(message))
+    inline fun verbose(t: Throwable, noinline message: () -> String) = Timber.v(t, "%s", LazyString(message))
 
     /** Log a debug message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun d(noinline message: () -> String) = Timber.d("%s", LazyString(message))
+    inline fun debug(noinline message: () -> String) = Timber.d("%s", LazyString(message))
 
     /** Log a debug exception and a message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun d(t: Throwable, noinline message: () -> String) = Timber.d(t, "%s", LazyString(message))
+    inline fun debug(t: Throwable, noinline message: () -> String) = Timber.d(t, "%s", LazyString(message))
 
     /** Log an info message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun i(noinline message: () -> String) = Timber.i("%s", LazyString(message))
+    inline fun info(noinline message: () -> String) = Timber.i("%s", LazyString(message))
 
     /** Log an info exception and a message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun i(t: Throwable, noinline message: () -> String) = Timber.i(t, "%s", LazyString(message))
+    inline fun info(t: Throwable, noinline message: () -> String) = Timber.i(t, "%s", LazyString(message))
 
     /** Log a warning message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun w(noinline message: () -> String) = Timber.w("%s", LazyString(message))
+    inline fun warning(noinline message: () -> String) = Timber.w("%s", LazyString(message))
 
     /** Log a warning exception and a message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun w(t: Throwable, noinline message: () -> String) = Timber.w(t, "%s", LazyString(message))
+    inline fun warning(t: Throwable, noinline message: () -> String) = Timber.w(t, "%s", LazyString(message))
 
     /** Log an error message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun e(noinline message: () -> String) = Timber.e("%s", LazyString(message))
+    inline fun error(noinline message: () -> String) = Timber.e("%s", LazyString(message))
 
     /** Log an error exception and a message that will be evaluated lazily when the message is printed */
     @JvmStatic
-    inline fun e(t: Throwable, noinline message: () -> String) = Timber.e(t, "%s", LazyString(message))
+    inline fun error(t: Throwable, noinline message: () -> String) = Timber.e(t, "%s", LazyString(message))
 
     /** Log an assert message that will be evaluated lazily when the message is printed */
     @JvmStatic
@@ -86,34 +86,34 @@ object Timber {
 //
 
 /** Log a verbose message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.v(noinline message: () -> String) = v("%s", LazyString(message))
+inline fun Timber.Tree.verbose(noinline message: () -> String) = v("%s", LazyString(message))
 
 /** Log a verbose exception and a message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.v(t: Throwable, noinline message: () -> String) = v(t, "%s", LazyString(message))
+inline fun Timber.Tree.verbose(t: Throwable, noinline message: () -> String) = v(t, "%s", LazyString(message))
 
 /** Log a debug message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.d(noinline message: () -> String) = d("%s", LazyString(message))
+inline fun Timber.Tree.debug(noinline message: () -> String) = d("%s", LazyString(message))
 
 /** Log a debug exception and a message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.d(t: Throwable, noinline message: () -> String) = d(t, "%s", LazyString(message))
+inline fun Timber.Tree.debug(t: Throwable, noinline message: () -> String) = d(t, "%s", LazyString(message))
 
 /** Log an info message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.i(noinline message: () -> String) = i("%s", LazyString(message))
+inline fun Timber.Tree.info(noinline message: () -> String) = i("%s", LazyString(message))
 
 /** Log an info exception and a message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.i(t: Throwable, noinline message: () -> String) = i(t, "%s", LazyString(message))
+inline fun Timber.Tree.info(t: Throwable, noinline message: () -> String) = i(t, "%s", LazyString(message))
 
 /** Log a warning message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.w(noinline message: () -> String) = w("%s", LazyString(message))
+inline fun Timber.Tree.warning(noinline message: () -> String) = w("%s", LazyString(message))
 
 /** Log a warning exception and a message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.w(t: Throwable, noinline message: () -> String) = w(t, "%s", LazyString(message))
+inline fun Timber.Tree.warning(t: Throwable, noinline message: () -> String) = w(t, "%s", LazyString(message))
 
 /** Log an error message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.e(noinline message: () -> String) = e("%s", LazyString(message))
+inline fun Timber.Tree.error(noinline message: () -> String) = e("%s", LazyString(message))
 
 /** Log an error exception and a message that will be evaluated lazily when the message is printed */
-inline fun Timber.Tree.e(t: Throwable, noinline message: () -> String) = e(t, "%s", LazyString(message))
+inline fun Timber.Tree.error(t: Throwable, noinline message: () -> String) = e(t, "%s", LazyString(message))
 
 /** Log an assert message that will be evaluated lazily when the message is printed */
 inline fun Timber.Tree.wtf(noinline message: () -> String) = wtf("%s", LazyString(message))
@@ -126,34 +126,34 @@ inline fun Timber.Tree.wtf(t: Throwable, noinline message: () -> String) = wtf(t
 //
 
 /** Log a verbose message that will be evaluated lazily when the message is printed */
-inline fun v(noinline message: () -> String) = Timber.v("%s", LazyString(message))
+inline fun verbose(noinline message: () -> String) = Timber.v("%s", LazyString(message))
 
 /** Log a verbose exception and a message that will be evaluated lazily when the message is printed */
-inline fun v(t: Throwable, noinline message: () -> String) = Timber.v(t, "%s", LazyString(message))
+inline fun verbose(t: Throwable, noinline message: () -> String) = Timber.v(t, "%s", LazyString(message))
 
 /** Log a debug message that will be evaluated lazily when the message is printed */
-inline fun d(noinline message: () -> String) = Timber.d("%s", LazyString(message))
+inline fun debug(noinline message: () -> String) = Timber.d("%s", LazyString(message))
 
 /** Log a debug exception and a message that will be evaluated lazily when the message is printed */
-inline fun d(t: Throwable, noinline message: () -> String) = Timber.d(t, "%s", LazyString(message))
+inline fun debug(t: Throwable, noinline message: () -> String) = Timber.d(t, "%s", LazyString(message))
 
 /** Log an info message that will be evaluated lazily when the message is printed */
-inline fun i(noinline message: () -> String) = Timber.i("%s", LazyString(message))
+inline fun info(noinline message: () -> String) = Timber.i("%s", LazyString(message))
 
 /** Log an info exception and a message that will be evaluated lazily when the message is printed */
-inline fun i(t: Throwable, noinline message: () -> String) = Timber.i(t, "%s", LazyString(message))
+inline fun info(t: Throwable, noinline message: () -> String) = Timber.i(t, "%s", LazyString(message))
 
 /** Log a warning message that will be evaluated lazily when the message is printed */
-inline fun w(noinline message: () -> String) = Timber.w("%s", LazyString(message))
+inline fun warning(noinline message: () -> String) = Timber.w("%s", LazyString(message))
 
 /** Log a warning exception and a message that will be evaluated lazily when the message is printed */
-inline fun w(t: Throwable, noinline message: () -> String) = Timber.w(t, "%s", LazyString(message))
+inline fun warning(t: Throwable, noinline message: () -> String) = Timber.w(t, "%s", LazyString(message))
 
 /** Log an error message that will be evaluated lazily when the message is printed */
-inline fun e(noinline message: () -> String) = Timber.e("%s", LazyString(message))
+inline fun error(noinline message: () -> String) = Timber.e("%s", LazyString(message))
 
 /** Log an error exception and a message that will be evaluated lazily when the message is printed */
-inline fun e(t: Throwable, noinline message: () -> String) = Timber.e(t, "%s", LazyString(message))
+inline fun error(t: Throwable, noinline message: () -> String) = Timber.e(t, "%s", LazyString(message))
 
 /** Log an assert message that will be evaluated lazily when the message is printed */
 inline fun wtf(noinline message: () -> String) = Timber.wtf("%s", LazyString(message))
